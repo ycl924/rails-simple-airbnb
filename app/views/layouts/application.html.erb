@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>RailsSimpleAirbnb</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+<head>
+  <title>RailsSimpleAirbnb</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <meta name="csrf-param" content="authenticity_token" />
+  <meta name="csrf-token" content="GPo3KB/Un2u6YDAREiM6MIPtAbh+TQFdNRgkmDCxBRlYik1GwewserdScr/ufCwdoyFIK4IkieYE+va/MbAHOg==" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+</head>
 
-  <body>
-    <%= yield %>
-  </body>
+<body>
+  <%= render 'shared/navbar' %>
+  <%= yield %>
+  <%= render 'shared/footer' %>
+</body>
+
 </html>

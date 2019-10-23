@@ -1,0 +1,31 @@
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-6 m-auto">
+      <div class="flat-form">
+        <h1>Add a new Flat</h1>
+        <div class="mt-3">
+          <%= simple_form_for(@flat) do |f| %>
+          <% if @flat.errors.any? %>
+          <div class="errors-container">
+            <ul>
+              <% @flat.errors.full_messages.each do |message| %>
+              <li>
+                <%= message %>
+              </li>
+              <% end %>
+            </ul>
+          </div>
+          <% end %>
+          <%= f.input :name, error: 'Mandatory field' %>
+          <%= f.input :address %>
+          <%= f.input :description, hint: 'No special characters.' %>
+          <%= f.input :number_of_guests %>
+          <%= f.input :price_per_night %>
+          <%= f.submit "add to list", class: "btn btn-primary" %>
+          <!-- [...] all the fields -->
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
